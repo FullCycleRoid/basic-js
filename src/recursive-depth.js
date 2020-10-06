@@ -2,11 +2,9 @@ const CustomError = require("../extensions/custom-error");
 
 module.exports = class DepthCalculator {
   calculateDepth( arr ) {
-  //   return Array.isArray(arr) ?
-  //     1 + Math.max(...arr.map(calculateDepth)) :
-  //     0;
-      throw new CustomError('Not implemented') ;
+          throw new CustomError('Not implemented') ;
 
+    // let res1 = arr.reduce((sum, elem) => sum + (Array.isArray(arr[elem]) ? this.calculateDepth(arr[elem]) : 1), 0)
+    // return res1
   }
-    // remove line with error and write your code here
 };
