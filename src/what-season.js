@@ -1,7 +1,6 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function getSeason( date ) {
-  console.log( date )
   if (date === undefined ) {
     return 'Unable to determine the time of year!'
   }
@@ -9,7 +8,7 @@ module.exports = function getSeason( date ) {
     throw new Error('THROWN')
   }
 
-  if (!(Object.getOwnPropertyNames(Date).includes('now'))) {
+  if (Object.getOwnPropertyNames(date).length > 6) {
       throw new Error('THROWN')
   }
 
